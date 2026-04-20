@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Table reservation details</title>
+  <style>
+    body {
+      font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 650px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 24px 28px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+      font-size: 32px;
+    }
+
+    .intro {
+      background: #f7f8ff;
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin-bottom: 24px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    label {
+      display: block;
+      margin-top: 16px;
+      color: #555;
+      font-size: 16px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 26px;
+      width: 100%;
+      padding: 12px;
+      background: #ff6f6f;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.95;
+    }
+
+    .note {
+      margin-top: 14px;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Table reservation details</h2>
+
+    <div class="intro">
+      This page is part of a hypothetical dining scenario used for research purposes.
+      Please <strong>do not</strong> enter any real personal information. You may use
+      initials, a fictional phone number and a test email address. You are placing a
+      hypothetical reservation for an evening dinner at <strong>Urban Ember Chef's Dinner</strong>,
+      similar to booking a table on a restaurant website.
+    </div>
+
+    <form action="thanks.html" method="get">
+      <label for="name">Name (initials only)</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="e.g., A. L. or J. K."
+        required
+      />
+
+      <label for="phone">Contact number (fictional)</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="e.g., 0000000000"
+        required
+      />
+
+      <label for="email">Email (fictional)</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="e.g., test@example.com"
+      />
+
+      <label for="guests">Number of guests</label>
+      <select id="guests" name="guests" required>
+        <option value="">Please select</option>
+        <option>1 guest</option>
+        <option>2 guests</option>
+        <option>3 guests</option>
+        <option>4 or more guests</option>
+      </select>
+
+      <button type="submit">Submit reservation</button>
+    </form>
+
+    <div class="note">
+      This reservation is for research purposes only. You will not actually be contacted
+      or charged outside of this survey.
+    </div>
+  </div>
+</body>
+</html>

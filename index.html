@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CityHaven Dining | Urban Ember Chef's Dinner</title>
+  <style>
+    /* Global layout */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      display: flex;
+      flex-direction: column;
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      color: #333;
+      background: #ffffff;
+    }
+    main { flex: 1; }
+
+    /* Hero section */
+    .hero {
+      position: relative;
+      background: url("hero.jpg") center/cover no-repeat;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    /* Brand name in top left */
+    .hero-brand {
+      position: absolute;
+      top: 33px;
+      left: 20px;
+      z-index: 2;
+      color: #ffffff;
+      font-size: 32px;
+      font-weight: bold;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      text-align: center;
+      color: #ffffff;
+      z-index: 1;
+    }
+    .hero-content h1 {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+    .hero-content .price-info {
+      margin-bottom: 20px;
+    }
+
+    /* Highlighted offer text */
+    .hero-content .hi-price {
+      display: inline-block;
+      color: #ffffff;
+      font-size: 22px;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.15);
+    }
+
+    /* Button bounce animation */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-8px); }
+    }
+    .hero-content .btn {
+      padding: 12px 24px;
+      background: #ff6f6f;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      animation: bounce 2s ease-in-out infinite;
+      transform: translateZ(0);
+      will-change: transform;
+    }
+    .hero-content .btn:hover {
+      animation-duration: 1s;
+    }
+
+    /* Feature cards */
+    .features {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 16px;
+      display: flex;
+      gap: 24px;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    .feature-card {
+      background: #ffffff;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      width: 260px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .feature-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+    .feature-card .info {
+      padding: 16px;
+      flex: 1;
+    }
+    .feature-card .info h3 {
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+    .feature-card .info p {
+      font-size: 14px;
+      color: #666666;
+    }
+
+    /* Footer */
+    footer {
+      background: #222222;
+      color: #cccccc;
+      text-align: center;
+      padding: 12px 0;
+      font-size: 14px;
+    }
+    footer a {
+      color: #cccccc;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<main>
+  <section class="hero">
+    <!-- Brand name -->
+    <div class="hero-brand">CityHaven Dining</div>
+
+    <div class="hero-content">
+      <!-- Product name -->
+      <h1>Urban Ember Chef's Dinner</h1>
+      <p>Designed for a relaxed and enjoyable dining experience</p>
+      <div class="price-info">
+        <span class="hi-price">Online booking on this website for all table reservations</span>
+      </div>
+      <button class="btn" onclick="location.href='booking.html'">Confirm table reservation</button>
+    </div>
+  </section>
+
+  <!-- Restaurant feature cards -->
+  <section class="features">
+  <div class="feature-card">
+    <img src="p1.jpg" alt="Indoor dining setting" />
+    <div class="info">
+      <h3>Indoor dining setting</h3>
+      <p>Seating arranged in a typical restaurant dining room for an evening sit down meal.</p>
+    </div>
+  </div>
+
+  <div class="feature-card">
+    <img src="p2.jpg" alt="Fixed dinner menu" />
+    <div class="info">
+      <h3>Fixed dinner menu</h3>
+      <p>A set sequence of courses served at the table during the reserved dinner time.</p>
+    </div>
+  </div>
+
+  <div class="feature-card">
+    <img src="p3.jpg" alt="Convenient location" />
+    <div class="info">
+      <h3>Convenient location</h3>
+      <p>Located in the city center with straightforward access by public transport or taxi.</p>
+    </div>
+  </div>
+
+  <div class="feature-card">
+    <img src="p4.jpg" alt="Reservation support" />
+    <div class="info">
+      <h3>Reservation support</h3>
+      <p>Online table booking and on site staff available to confirm your seat and timing.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  CityHaven Dining © 2025 | Reservation hotline: 400-234-5678 | Email: contact@cityhavendining.com
+</footer>
+
+<script>
+  // Scroll to top on load
+  window.onload = () => window.scrollTo(0, 0);
+</script>
+
+</body>
+</html>
