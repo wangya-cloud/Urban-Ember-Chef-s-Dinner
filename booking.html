@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Table reservation details</title>
+  <title>Reservation details</title>
+
   <style>
     body {
       font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -45,14 +46,14 @@
       font-size: 16px;
     }
 
-    input,
-    select {
+    input {
       width: 100%;
       padding: 10px;
       margin-top: 6px;
       border: 1px solid #ccc;
       border-radius: 4px;
       font-size: 16px;
+      box-sizing: border-box;
     }
 
     button {
@@ -80,20 +81,23 @@
     }
   </style>
 </head>
+
 <body>
+
   <div class="container">
-    <h2>Table reservation details</h2>
+
+    <h2>Reservation details</h2>
 
     <div class="intro">
-      This page is part of a hypothetical dining scenario used for research purposes.
-      Please <strong>do not</strong> enter any real personal information. You may use
-      initials, a fictional phone number and a test email address. You are placing a
-      hypothetical reservation for an evening dinner at <strong>Urban Ember Chef's Dinner</strong>,
-      similar to booking a table on a restaurant website.
+      For this research task, please <strong>do not</strong> enter any real personal
+      information. Use fictional initials, a fictional phone number, and a test email
+      address. Please complete the reservation for the
+      <strong>Urban Ember Chef's Dinner</strong> using the fields below.
     </div>
 
     <form action="thanks.html" method="get">
-      <label for="name">Name (initials only)</label>
+
+      <label for="name">Name (fictional initials)</label>
       <input
         type="text"
         id="name"
@@ -102,7 +106,7 @@
         required
       />
 
-      <label for="phone">Contact number (fictional)</label>
+      <label for="phone">Phone number (fictional)</label>
       <input
         type="tel"
         id="phone"
@@ -117,24 +121,21 @@
         id="email"
         name="email"
         placeholder="e.g., test@example.com"
+        required
       />
 
-      <label for="guests">Number of guests</label>
-      <select id="guests" name="guests" required>
-        <option value="">Please select</option>
-        <option>1 guest</option>
-        <option>2 guests</option>
-        <option>3 guests</option>
-        <option>4 or more guests</option>
-      </select>
+      <button type="submit">
+        Submit reservation
+      </button>
 
-      <button type="submit">Submit reservation</button>
     </form>
 
     <div class="note">
-      This reservation is for research purposes only. You will not actually be contacted
-      or charged outside of this survey.
+      This task is for research purposes only. No real transaction will be made,
+      and you will not be charged or contacted outside this survey.
     </div>
+
   </div>
+
 </body>
 </html>
